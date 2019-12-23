@@ -3,7 +3,7 @@ addons:
   chrome: stable
 language: node_js
 node_js:
-  - "10.0"
+  - "10.15.0"
 branches:
   only:
     - master
@@ -11,7 +11,7 @@ before_script:
   - npm install -g @angular/cli
 script:
   - npm install
-  - ng test
+  - npm run test-headless
   - ng build --prod
 deploy:
   skip_cleanup: true
