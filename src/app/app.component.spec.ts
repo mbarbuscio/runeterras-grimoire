@@ -1,6 +1,8 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { DataDragonService } from './core/services/data-dragon.service';
+import { DataDragonServiceMock } from '@testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -11,6 +13,9 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      providers: [
+        { provide: DataDragonService, useClass: DataDragonServiceMock}
+      ]
     }).compileComponents();
   }));
 
@@ -20,16 +25,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'runeterras-grimoire'`, () => {
+  it(`should have as title 'Runeterra's Grimoire'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('runeterras-grimoire');
+    expect(app.title).toEqual("Runeterra's Grimoire");
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('runeterras-grimoire app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain("Runeterra's Grimoire app is running!");
   });
 });

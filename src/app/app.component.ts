@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataDragonService } from './core/services/data-dragon.service';
 
 @Component({
   selector: 'rgm-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'runeterras-grimoire';
+  title = "Runeterra's Grimoire";
+
+  constructor(data: DataDragonService) {
+  }
 }
