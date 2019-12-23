@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { Region, Globals } from '@models';
 
 @Injectable()
 export class DataDragonService {
@@ -8,10 +10,18 @@ export class DataDragonService {
   constructor(private http: HttpClient) {
   }
 
-  private getGlobals() {
+  public getRegions() : Observable<Region[]> {
+    return this.getGlobals().pipe(
+      map(response => {
+        return response.regions;
+      })
+    )
+  }
+
+  private getGlobals() : Observable<Globals> {
     return this.http.get("./assets/data/globals-en_us.json").pipe(
       map((res: any) => {
-        return res;
+        return new Globals().deserialize(res);
       })
     )
   }
