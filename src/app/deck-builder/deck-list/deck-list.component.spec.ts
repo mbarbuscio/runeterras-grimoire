@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DeckListComponent } from './deck-list.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { DataDragonService } from '@core';
 
 describe('DeckListComponent', () => {
   let component: DeckListComponent;
@@ -8,7 +10,9 @@ describe('DeckListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DeckListComponent ]
+      declarations: [ DeckListComponent ],
+      imports: [ HttpClientTestingModule ],
+      providers: [ DataDragonService ]
     })
     .compileComponents();
   }));

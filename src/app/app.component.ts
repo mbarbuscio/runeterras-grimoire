@@ -11,13 +11,7 @@ import { tap, filter } from 'rxjs/operators';
 export class AppComponent {
   title = "Runeterra's Grimoire";
 
-  cards = [];
-
-  constructor(private data: DataDragonService) {
-    this.data.filteredSetData(card => card.collectible).subscribe(cards => {
-      this.cards = cards.sort((left, right) => 
-        (left.region >= right.region) ? -1 : 1 );
-    });
+  constructor() {
   }
 
 }

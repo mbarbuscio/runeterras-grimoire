@@ -147,3 +147,38 @@ export const _setDataMock = [
     "collectible": true
   }
 ]
+
+export const _cardMock = {
+  "associatedCards": [],
+  "associatedCardRefs": [],
+  "assets": [
+    {
+      "gameAbsolutePath": "http://dd.b.pvp.net/1_0_0/set1/en_us/img/cards/01DE031.png",
+      "fullAbsolutePath": "http://dd.b.pvp.net/1_0_0/set1/en_us/img/cards/01DE031-full.png"
+    }
+  ],
+  "region": "Demacia",
+  "regionRef": "Demacia",
+  "attack": 1,
+  "cost": 3,
+  "health": 4,
+  "description": "<link=vocab.RoundEnd><style=Vocab>Round End</style></link>: Grant other allies +1|+1 if an ally died this round.",
+  "descriptionRaw": "Round End: Grant other allies +1|+1 if an ally died this round.",
+  "levelupDescription": "",
+  "levelupDescriptionRaw": "",
+  "flavorText": "\"Evil has taken the hour, but it will not win the day. Remember our fallen, and wear their memories like armor!\"",
+  "artistName": "SIXMOREVODKA",
+  "name": "Dawnspeakers",
+  "cardCode": "01DE031",
+  "keywords": [],
+  "keywordRefs": [],
+  "spellSpeed": "",
+  "spellSpeedRef": "",
+  "rarity": "EPIC",
+  "rarityRef": "Epic",
+  "subtype": "",
+  "subtypes": [],
+  "supertype": "",
+  "type": "Unit",
+  "collectible": true
+}

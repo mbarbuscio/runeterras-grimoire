@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardListComponent } from './card-list.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { RouterTestingModule } from '@angular/router/testing';
+import { DataDragonService } from '@core';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('CardListComponent', () => {
   let component: CardListComponent;
@@ -8,7 +13,9 @@ describe('CardListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CardListComponent ]
+      declarations: [ CardListComponent ],
+      providers: [ DataDragonService ],
+      imports: [ SharedModule, ScrollingModule, HttpClientTestingModule ]
     })
     .compileComponents();
   }));

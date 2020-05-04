@@ -18,6 +18,7 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
     DeckBuilderRoutingModule,
     SharedModule,
     ScrollingModule
-  ]
+  ],
+  exports: [CardListComponent, CardListFilterComponent, DeckListComponent, DeckBuilderComponent]
 })
 export class DeckBuilderModule { }
