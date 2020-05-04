@@ -1,0 +1,7 @@
+
+<div class="header">
+    <pre>{{ regions | json }}</pre>
+</div>
+<div class="card-list">
+    <rgm-preview-card *ngFor="let deckCard of cardsList | async" [card]="deckCard.card" [count]="deckCard.count" (click)="removeCard(deckCard.card)" ></rgm-preview-card>
+</div>

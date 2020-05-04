@@ -1,3 +1,5 @@
-<cdk-virtual-scroll-viewport itemSize="24">
-    <rgm-card *cdkVirtualFor="let card of cards | async" [card]="card"></rgm-card>
-</cdk-virtual-scroll-viewport>
+<!-- <cdk-virtual-scroll-viewport itemSize="280" minBufferPx="600"> -->
+<div>
+    <rgm-card *ngFor="let card of cards | async" [card]="card" (click)="addCard(card)"></rgm-card>
+</div>
+<!-- </cdk-virtual-scroll-viewport> -->

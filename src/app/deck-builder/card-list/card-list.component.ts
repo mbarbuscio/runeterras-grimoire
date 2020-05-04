@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataDragonService } from '@core';
+import { DeckService } from 'src/app/core/services/deck.service';
+import { Card } from '@models';
 
 @Component({
   selector: 'rgm-card-list',
@@ -12,8 +14,12 @@ export class CardListComponent implements OnInit {
     return this.service.activeCardList;
   }
 
-  constructor(private service: DataDragonService) { }
+  constructor(private service: DataDragonService, private deck: DeckService) { }
 
   ngOnInit() {
+  }
+
+  addCard(card: Card) {
+    this.deck.addCard(card);
   }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataDragonService } from '@core';
+import { DeckService } from 'src/app/core/services/deck.service';
+import { Card } from '@models';
 
 @Component({
   selector: 'rgm-deck-list',
@@ -8,14 +10,21 @@ import { DataDragonService } from '@core';
 })
 export class DeckListComponent implements OnInit {
 
-  cards = [];
+  get cardsList() {
+    return this.deck.activeDeck;
+  }
 
-  constructor(private service: DataDragonService) { }
+  get regions() {
+    return this.deck.deckRegions;
+  }
+
+  constructor(private deck: DeckService) { }
 
   ngOnInit() {
-    this.service.filteredSetData(card => card.collectible).subscribe(cardList => {
-      this.cards = cardList;
-    });
+  }
+
+  removeCard(card: Card) {
+    this.deck.removeCard(card);
   }
 
 }

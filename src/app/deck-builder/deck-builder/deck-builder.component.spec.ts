@@ -7,6 +7,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { DataDragonService } from '@core';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { DeckListComponent } from '../deck-list/deck-list.component';
+import { DeckService } from 'src/app/core/services/deck.service';
 
 describe('DeckBuilderComponent', () => {
   let component: DeckBuilderComponent;
@@ -14,8 +16,8 @@ describe('DeckBuilderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DeckBuilderComponent, CardListComponent, CardListFilterComponent ],
-      providers: [ DataDragonService ],
+      declarations: [ DeckBuilderComponent, CardListComponent, CardListFilterComponent, DeckListComponent ],
+      providers: [ DataDragonService, DeckService ],
       imports: [ SharedModule, ScrollingModule, HttpClientTestingModule ]
     })
     .compileComponents();
