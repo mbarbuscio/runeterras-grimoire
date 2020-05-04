@@ -17,7 +17,4 @@ deploy:
   skip_cleanup: true
   provider: firebase
   token:
-    secure: "$FIREBASE_TOKEN"
-env:
-  global:
     secure: kVbjybp6dTvGWpiHex5tB77lgkVHLM6lWqiwmHZeizc8Gx2RjHvCogTd+is4BXry4APM4ViUimoRYm63F64sk0ZK1gAfZ/xKpxrsthKkWTCE16TXn/QcAiwPB/mVeXJNUdtXzPWooKkgoAkKdd7EF5+33exFZcDytfOHrXiyAvXD05KAELq56yF6r6qTmbujh+9ic1PBeML1snWlJvS5ziqiUuk1E2H6QjwTZW8syG/NyHvP+DHFM8wrtSTBDcqgCIJSe7VNJHr1vJ4e+yzHFgzS2YNO+eXvR4MZkEpf4O+gPw6eX6ybt0BtCG1+JFEMzabbLPVjMqJ4Fb1iJpnEFTbLgk8YHEf7G6UaweRXjfdF+Bau39e9TSgUWlO55PXS6mn9I0Kv8CN5NKpbSr1Zt0osiVqTdWmdmelHvGq+Jsa5s2A2YAIZY8+00HOO5xa6vNHZ1a1EPs5tTnDzTJ+DMGRlz8oE6hX1AoOmq6v1dWiBihibWiTxbmEhrA1cbSP0ZA9/4B1GBaUkr8QcMFIQ0eimQ8SmUCpi1RitF260w0ujvQKu+4G+2JNEVDjg/PNwW+0Pa6UVg6x//pnL/u9Vkug/JIY99K41PSQ0WzJN9mvXzj/OI+V0RqTi2FrRJNmgHM8dnXEM/exQJLr16r40pq5pka16A09MJatZoJWDXcc=
