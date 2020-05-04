@@ -6,8 +6,18 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding-right: 48px;
+    padding-right: 26px;
+    padding-left: 5px;
     flex-direction: column;
+    border-left: solid 1px #D5934A;
+    &::before{
+        content: '';
+        left: 0;
+        width: 4px;
+        height: 100%;
+        position: absolute;
+        border-right: solid 1px rgb(153, 102, 77);
+    }
     &>.header{
         height: 240px;
         width: 100%;

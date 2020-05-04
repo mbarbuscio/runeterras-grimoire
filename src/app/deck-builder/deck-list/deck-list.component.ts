@@ -14,10 +14,6 @@ export class DeckListComponent implements OnInit {
     return this.deck.activeDeck;
   }
 
-  get regions() {
-    return this.deck.deckRegions;
-  }
-
   constructor(private deck: DeckService) { }
 
   ngOnInit() {
