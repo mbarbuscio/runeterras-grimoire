@@ -1,0 +1,16 @@
+<h2>Filters</h2>
+
+<div class="rarity-filter">
+    <div (click)="filterRarity('champion');" [class.active]="activeFilters['rarity']?.value === 'champion'">
+        <i class="rgm-icon rarity champion"></i>
+    </div>
+    <div (click)="filterRarity('common');" [class.active]="activeFilters['rarity']?.value === 'common'">
+        <i class="rgm-icon rarity common"></i>
+    </div>
+    <div (click)="filterRarity('rare');" [class.active]="activeFilters['rarity']?.value === 'rare'">
+        <i class="rgm-icon rarity rare"></i>
+    </div>
+    <div (click)="filterRarity('epic');" [class.active]="activeFilters['rarity']?.value === 'epic'">
+        <i class="rgm-icon rarity epic"></i>
+    </div>
+</div>

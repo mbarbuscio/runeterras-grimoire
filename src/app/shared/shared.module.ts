@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CardComponent } from './card/card.component';
+import { PreviewCardComponent } from './preview-card/preview-card.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [CardComponent, PreviewCardComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [CardComponent, PreviewCardComponent]
 })
 export class SharedModule {
   static forRoot() {

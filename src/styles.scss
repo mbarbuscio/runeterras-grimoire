@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{ 
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+html, body { }
+body { margin: 0; font-family: 'Jost', sans-serif; }
+
+
+// icons
+
+.rgm-icon{
+    display: flex;
+    &.rarity{
+        background-image: url('./assets/rarity.png');
+        height: 60px;
+        width: 60px;
+        &.shard{
+            background-position: 65px 190px;
+        }
+        &.champion{
+            background-position: -3px 123px; /* X and Y */
+        }
+        &.epic{
+            background-position: 60px 123px; /* X and Y */
+        }
+        &.common{
+            background-position: -3px 60px;
+        }
+        &.rare{
+            background-position: 60px 59px; /* X and Y */
+        }
+    }
+}

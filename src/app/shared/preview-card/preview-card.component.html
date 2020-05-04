@@ -1,0 +1,5 @@
+<div [class]="card?.regionRef.toLowerCase()" [ngStyle]="{ 'background-image': 'url(' + card.assets[0].fullAbsolutePath + ')'}">
+    <span>{{card.cost}}</span>
+    <span>{{card.name}}</span>
+    <span *ngIf="count > 1">x&nbsp;{{count}}</span>
+</div>

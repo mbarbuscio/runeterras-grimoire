@@ -1,0 +1,211 @@
+:host{
+    width: 100vw;
+    height: 100vh;
+    .header{
+        width: 100vw;
+        position: relative;
+        height: 80px;
+        border-bottom: solid 1px rgb(153, 102, 77);
+        &>.frames{
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            top: 20px;
+            height: 60px;
+            &::before{
+                content:'';
+                display: inline-block;
+                position: relative;
+                left: 0;
+                top: 40px;
+                height: 20px;
+                bottom: 0;
+                border-left:  solid 1px rgb(153, 102, 77);
+            }
+            &::after{
+                content:'';
+                display: inline-block;
+                position: relative;
+                left: 76px;
+                top: 40px;
+                bottom: 0;
+                height: 20px;
+                border-left:  solid 1px rgb(153, 102, 77);
+            }
+            &>.outer_top{
+                content:'';
+                display: inline-block;
+                position: relative;
+                left: 40px;
+                right: 40px;
+                top: -20px;
+                border-top:  solid 1px rgb(153, 102, 77);
+                width: calc(100% - 78px);
+            }
+            &>.outer_circles{
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                height: 40px;
+                width: 100%;
+                overflow: hidden;
+                &::before{
+                    content: '';
+                    height: 80px;
+                    width: 80px;
+                    position: relative;
+                    display: inline-block;
+                    top: -42px;
+                    left: -40px;
+                    border:  solid 1px rgb(153, 102, 77);
+                    border-radius: 50%;
+                }
+                &::after{
+                    content: '';
+                    height: 80px;
+                    width: 80px;
+                    position: relative;
+                    display: inline-block;
+                    top: -42px;
+                    left: calc(100% - 120px);
+                    border:  solid 1px rgb(153, 102, 77);
+                    border-radius: 50%;
+                }
+            }
+        }
+        &>.frames-inner{
+            position: absolute;
+            // left: 30px;
+            // right: 30px;
+            // top: 30px;
+            left: 25px;
+            right: 25px;
+            top: 25px;
+            height: 50px;
+            &::before{
+                content:'';
+                display: inline-block;
+                position: relative;
+                left: 0;
+                top: 20px;
+                height: 35px;
+                bottom: 0;
+                border-left:  solid 1px rgb(104, 72, 44);
+            }
+            &::after{
+                content:'';
+                display: inline-block;
+                position: relative;
+                left: 36px;
+                top: 20px;
+                bottom: 0;
+                height: 35px;
+                border-left:  solid 1px rgb(104, 72, 44);
+            }
+            &>.outer_top{
+                content:'';
+                display: inline-block;
+                position: relative;
+                left: 20px;
+                right: 20px;
+                top: -35px;
+                border-top:  solid 1px rgb(104, 72, 44);
+                width: calc(100% - 38px);
+            }
+            &>.outer_circles{
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                height: 20px;
+                width: 100%;
+                overflow: hidden;
+                &::before{
+                    content: '';
+                    height: 40px;
+                    width: 40px;
+                    position: relative;
+                    display: inline-block;
+                    top: -22px;
+                    left: -20px;
+                    border:  solid 1px rgb(104, 72, 44);
+                    border-radius: 50%;
+                }
+                &::after{
+                    content: '';
+                    height: 40px;
+                    width: 40px;
+                    position: relative;
+                    display: inline-block;
+                    top: -22px;
+                    left: calc(100% - 60px);
+                    border:  solid 1px rgb(104, 72, 44);
+                    border-radius: 50%;
+                }
+            }
+        }
+        &>.content{
+            position: absolute;
+            left: 60px;
+            right: 60px;
+            top: 20px;
+            bottom: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-end;
+            &>span{
+                flex: 0 0 auto;
+                display: flex;
+                height: 50px;
+                padding: 6px 12px;
+                font-size: 20px;
+                position: relative;
+                align-items: flex-end;
+                color: rgb(153, 102, 77);
+                &::after{
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 2px;
+                    background-color: rgb(153, 102, 77);
+                }
+            }
+        }
+    }
+    .body-content{
+        background-color: #111111;
+        height: calc(100vh - 80px);
+        width: 100vw;
+        position: relative;
+        &::before{
+            left: 20px;
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 4px;
+            border-left: solid 1px #D5934A;
+            border-right: solid 1px rgb(153, 102, 77);
+        }
+        &::after{
+            right: 20px;
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 4px;
+            border-right: solid 1px #D5934A;
+            border-left: solid 1px rgb(153, 102, 77);
+        }
+    }
+}

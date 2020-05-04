@@ -1,0 +1,36 @@
+:host{
+    height: 240px;
+    padding: 12px 48px;
+    width: calc(100vw - 320px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    h2{
+        width: 100%;
+        color: #D5934A;
+    }
+    .rarity-filter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 240px;
+        &>div{
+            border: solid 1px rgb(153, 102, 77);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &.active{
+                background-color: rgb(104, 72, 44);
+                i{
+                    filter: grayscale(100%);
+                    opacity: 0.65;
+                }
+            }
+        }
+    }
+}

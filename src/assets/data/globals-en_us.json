@@ -1,4 +1,76 @@
 {
+  "vocabTerms": [
+    {
+      "description": "When you summon this, it gets its allegiance bonus if the top card of your deck matches its region.",
+      "name": "Allegiance",
+      "nameRef": "Allegiance"
+    },
+    {
+      "description": "Attacking with a support unit will buff the unit to its right.",
+      "name": "Support",
+      "nameRef": "Support"
+    },
+    {
+      "description": "Highest Power, with ties broken by highest Health then highest Cost.",
+      "name": "Strongest",
+      "nameRef": "Strongest"
+    },
+    {
+      "description": "Obliterate X non-champion cards from the bottom of your deck.",
+      "name": "Toss",
+      "nameRef": "Toss"
+    },
+    {
+      "description": "Get this effect when the round ends.",
+      "name": "Round End",
+      "nameRef": "RoundEnd"
+    },
+    {
+      "description": "Get this effect when this unit attacks.",
+      "name": "Attack",
+      "nameRef": "Attack"
+    },
+    {
+      "description": "Get this effect when a unit attempts to deal damage using its Power, either at the end of battle or with spells. Units with 0 Power can't strike.",
+      "name": "Strike",
+      "nameRef": "Strike"
+    },
+    {
+      "description": "Effect when unit Strikes the enemy Nexus.",
+      "name": "Nexus Strike",
+      "nameRef": "NexusStrike"
+    },
+    {
+      "description": "Get this effect when the round starts.",
+      "name": "Round Start",
+      "nameRef": "RoundStart"
+    },
+    {
+      "description": "Get this effect when you play this unit from hand.",
+      "name": "Play",
+      "nameRef": "Play"
+    },
+    {
+      "description": "In play, in hand, in deck, in discard, and even if created/summoned later.",
+      "name": "Everywhere",
+      "nameRef": "Everywhere"
+    },
+    {
+      "description": "If you don't have one, gain the attack token. (You can attack this round.)",
+      "name": "Rally",
+      "nameRef": "Rally"
+    },
+    {
+      "description": "Remove all keywords, abilities, and ongoing effects. Doesn't affect damage or subtype.",
+      "name": "Silence",
+      "nameRef": "Silence"
+    },
+    {
+      "description": "A card triggers its plunder ability when played if you damaged the enemy Nexus this round.",
+      "name": "Plunder",
+      "nameRef": "Plunder"
+    }
+  ],
   "keywords": [
     {
       "description": "Completely removed from the game. Doesn't cause Last Breath and can't be revived.",
@@ -6,7 +78,7 @@
       "nameRef": "Obliterate"
     },
     {
-      "description": "A spell-like effect created and cast by unit.",
+      "description": "A unit's spell-like effect that allows enemy reactions.",
       "name": "Skill",
       "nameRef": "Skill"
     },
@@ -19,6 +91,16 @@
       "description": "Lowest Power, with ties broken by lowest Health then lowest Cost",
       "name": "Weakest",
       "nameRef": "Weakest"
+    },
+    {
+      "description": "The enemy can challenge this unit, forcing it to block.",
+      "name": "Vulnerable",
+      "nameRef": "Vulnerable"
+    },
+    {
+      "description": "Get this effect when this unit attacks.",
+      "name": "Attack",
+      "nameRef": "AttackSkillMark"
     },
     {
       "description": "Can only be blocked by an Elusive unit.",
@@ -61,9 +143,19 @@
       "nameRef": "SpellOverwhelm"
     },
     {
+      "description": "When I'm summoned, refill 1 spell mana.",
+      "name": "Attune",
+      "nameRef": "Attune"
+    },
+    {
       "description": "Negates the next damage the unit would take. Lasts one round.",
       "name": "Barrier",
       "nameRef": "Barrier"
+    },
+    {
+      "description": "Can't attack or block.",
+      "name": "Immobile",
+      "nameRef": "Immobile"
     },
     {
       "description": "A Captured card is removed from the game. It returns when the Capturing unit leaves play.",
@@ -96,6 +188,11 @@
       "nameRef": "Overwhelm"
     },
     {
+      "description": "Get this effect when you play this unit from hand.",
+      "name": "Play",
+      "nameRef": "PlaySkillMark"
+    },
+    {
       "description": "While attacking, strikes before its blocker.",
       "name": "Quick Attack",
       "nameRef": "QuickStrike"
@@ -121,6 +218,11 @@
       "nameRef": "Regeneration"
     },
     {
+      "description": "Removes all text and keywords from a unit.",
+      "name": "Silenced",
+      "nameRef": "Silenced"
+    },
+    {
       "description": "Damage this unit deals heals its Nexus that amount.",
       "name": "Lifesteal",
       "nameRef": "Lifesteal"
@@ -131,6 +233,11 @@
       "nameRef": "Enlightened"
     },
     {
+      "description": "A champion levels up once this condition is met, even in hand or deck.",
+      "name": "Level Up",
+      "nameRef": "LevelUp"
+    },
+    {
       "description": "Slow spells can be cast outside of combat and other casting. The enemy can respond.",
       "name": "Slow",
       "nameRef": "Slow"
@@ -139,6 +246,11 @@
       "description": " ",
       "name": "Noxus",
       "nameRef": "Noxus"
+    },
+    {
+      "description": "The first time only Scout units attack each round, ready your attack.",
+      "name": "Scout",
+      "nameRef": "Scout"
     },
     {
       "description": "This unit dies when it strikes or when the round ends.",
@@ -156,6 +268,11 @@
       "nameRef": "LastBreath"
     },
     {
+      "description": " ",
+      "name": "Bilgewater",
+      "nameRef": "Bilgewater"
+    },
+    {
       "description": "Can choose which enemy unit blocks.",
       "name": "Challenger",
       "nameRef": "Challenger"
@@ -166,7 +283,7 @@
       "nameRef": "Imbue"
     },
     {
-      "description": "Can only be blocked by enemies with 3 or more Attack.",
+      "description": "Can only be blocked by enemies with 3 or more Power.",
       "name": "Fearsome",
       "nameRef": "Fearsome"
     },
@@ -174,42 +291,53 @@
       "description": " ",
       "name": "Can't Block",
       "nameRef": "CantBlock"
+    },
+    {
+      "description": "",
+      "name": "Deep",
+      "nameRef": "Deep"
     }
   ],
   "regions": [
     {
       "abbreviation": "NX",
-      "iconAbsolutePath": "http://dd.b.pvp.net/core/en_us/img/regions/icon-noxus.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/1_0_0/core/en_us/img/regions/icon-noxus.png",
       "name": "Noxus",
       "nameRef": "Noxus"
     },
     {
       "abbreviation": "DE",
-      "iconAbsolutePath": "http://dd.b.pvp.net/core/en_us/img/regions/icon-demacia.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/1_0_0/core/en_us/img/regions/icon-demacia.png",
       "name": "Demacia",
       "nameRef": "Demacia"
     },
     {
       "abbreviation": "FR",
-      "iconAbsolutePath": "http://dd.b.pvp.net/core/en_us/img/regions/icon-freljord.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/1_0_0/core/en_us/img/regions/icon-freljord.png",
       "name": "Freljord",
       "nameRef": "Freljord"
     },
     {
       "abbreviation": "SI",
-      "iconAbsolutePath": "http://dd.b.pvp.net/core/en_us/img/regions/icon-shadowisles.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/1_0_0/core/en_us/img/regions/icon-shadowisles.png",
       "name": "Shadow Isles",
       "nameRef": "ShadowIsles"
     },
     {
       "abbreviation": "IO",
-      "iconAbsolutePath": "http://dd.b.pvp.net/core/en_us/img/regions/icon-ionia.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/1_0_0/core/en_us/img/regions/icon-ionia.png",
       "name": "Ionia",
       "nameRef": "Ionia"
     },
     {
+      "abbreviation": "BW",
+      "iconAbsolutePath": "http://dd.b.pvp.net/1_0_0/core/en_us/img/regions/icon-bilgewater.png",
+      "name": "Bilgewater",
+      "nameRef": "Bilgewater"
+    },
+    {
       "abbreviation": "PZ",
-      "iconAbsolutePath": "http://dd.b.pvp.net/core/en_us/img/regions/icon-piltoverzaun.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/1_0_0/core/en_us/img/regions/icon-piltoverzaun.png",
       "name": "Piltover & Zaun",
       "nameRef": "PiltoverZaun"
     }
@@ -230,15 +358,15 @@
   ],
   "rarities": [
     {
-      "name": "Common",
+      "name": "COMMON",
       "nameRef": "Common"
     },
     {
-      "name": "Rare",
+      "name": "RARE",
       "nameRef": "Rare"
     },
     {
-      "name": "Epic",
+      "name": "EPIC",
       "nameRef": "Epic"
     },
     {

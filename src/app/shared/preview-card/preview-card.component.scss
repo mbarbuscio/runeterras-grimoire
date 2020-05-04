@@ -1,0 +1,83 @@
+:host{
+    display: flex;
+    height: 40px;
+    width: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+    &>div{
+        width: 100%;
+        height: 100%;
+        padding: 12px 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        &::before{
+            content: '';
+            left: 0;
+            right: 20%;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+
+        }
+        &.bilgewater{
+            background-color: #b4563a;
+            &::before{
+                background-color: #b4563a;
+                background: linear-gradient(to right, rgb(180,86,58), rgba(180,86,58,0));
+            }
+        }
+        &.demacia{
+            background-color: #E6D9B7;
+            &::before{
+            background-color: #E6D9B7;
+            background: linear-gradient(to right, rgb(230,217,183), rgba(230,217,183,0));
+            }
+        }
+        &.freljord{
+            background-color: #8FD7F3;
+            &::before{
+            background-color: #8FD7F3;
+            background: linear-gradient(to right, rgb(143,215,243), rgba(143,215,243,0));
+            }
+        }
+        &.ionia{
+            background-color: #CF829B;
+            &::before{
+            background-color: #CF829B;
+            background: linear-gradient(to right, rgb(207,130,155), rgba(207,130,155,0));
+            }
+        }
+        &.noxus{
+            background-color: #A0524F;
+            &::before{
+            background-color: #A0524F;
+            background: linear-gradient(to right, rgb(160,82,79), rgba(160,82,79,0));
+            }
+        }
+        &.piltoverzaun{
+            background-color: #E29F76;
+            &::before{
+            background-color: #E29F76;
+            background: linear-gradient(to right, rgb(226,159,118), rgba(226,159,118,0));
+            }
+        }
+        &.shadowisles{
+            background-color: #3B7D6F;
+            &::before{
+            background-color: #3B7D6F;
+            background: linear-gradient(to right, rgb(59,125,111), rgba(59,125,111,0));
+            }
+        }
+        &>span{
+            position: relative;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+    }
+    
+}

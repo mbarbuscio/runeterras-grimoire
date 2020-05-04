@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DataDragonService } from './services/data-dragon.service';
 import { throwIfAlreadyLoaded } from './module-import.guard';
 import { HttpClientModule } from '@angular/common/http';
+import { DeckService } from './services/deck.service';
 
 @NgModule({
   declarations: [],
@@ -19,7 +20,7 @@ export class CoreModule {
   static forRoot() {
     return {
       ngModule: CoreModule,
-      providers: [DataDragonService]
+      providers: [DataDragonService, DeckService]
     }
   }
 }
