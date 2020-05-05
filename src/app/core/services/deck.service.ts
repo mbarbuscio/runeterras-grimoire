@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Card } from 'src/app/models/card.model';
 import { BehaviorSubject, Observable, empty } from 'rxjs';
 import { DeckCard } from '@models';
+import { encode } from 'lor-deckcode';
 
 @Injectable()
 export class DeckService {
@@ -184,5 +185,10 @@ export class DeckService {
       ), 1);
       this.cardList$.next(newDeck);
     }
+  }
+
+  exportDeck() {
+    const decodedDeck = this.cardList$.value.map(deckCard => ({ code: deckCard.card.cardCode, count: deckCard.count }));
+    
   }
 }
