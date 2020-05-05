@@ -94,6 +94,24 @@ export class DeckService {
     }, 0);
   }
 
+  private get followerCount() {
+    return this.cardList$.value
+      .filter(deckCard => deckCard.card.rarityRef.toUpperCase() !== 'CHAMPION' && deckCard.card.type === 'Unit')
+      .map(deckCard => deckCard.count)
+      .reduce((left, right) => {
+        return left + right;
+    }, 0);
+  }
+
+  private get spellCount() {
+    return this.cardList$.value
+      .filter(deckCard => deckCard.card.rarityRef.toUpperCase() !== 'CHAMPION' && deckCard.card.type === 'Spell')
+      .map(deckCard => deckCard.count)
+      .reduce((left, right) => {
+        return left + right;
+    }, 0);
+  }
+
   get deckStats() {
     return {
       regions: this.deckRegions,
@@ -101,8 +119,12 @@ export class DeckService {
       manaCurve: this.manaCurve,
       rarityCount: this.rarityCount,
       shardCost: this.shardCost,
-      cardCount: this.cardCount,
-      championCount: this.championCount
+      cardCount: {
+        all: this.cardCount,
+        champions: this.championCount,
+        followers: this.followerCount,
+        spells: this.spellCount
+      }
     };
   }
 

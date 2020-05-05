@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataDragonService } from '@core';
 import { DeckService } from 'src/app/core/services/deck.service';
 import { Card } from '@models';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'rgm-deck-list',
@@ -11,7 +12,9 @@ import { Card } from '@models';
 export class DeckListComponent implements OnInit {
 
   get cardsList() {
-    return this.deck.activeDeck;
+    return this.deck.activeDeck.pipe(
+      map(deckList => deckList.sort((left, right) => left.card.cost < right.card.cost ? -1 : 1))
+    );
   }
 
   get stats() {

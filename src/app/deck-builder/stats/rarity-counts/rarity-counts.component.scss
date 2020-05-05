@@ -22,11 +22,11 @@
         &::after{
             content: '';
             position: absolute;
-            top: 0;
-            bottom: 0;
+            top: 5px;
+            bottom: 5px;
             right: 0;
             border-right: solid 1px #D5934A;
-            opacity: 0.5;
+            opacity: 0.3;
         }
         &:last-of-type{
             &::after{

@@ -8,6 +8,7 @@ import { DeckService } from 'src/app/core/services/deck.service';
 import { RarityCountsComponent } from '../stats/rarity-counts/rarity-counts.component';
 import { ShardCostComponent } from '../stats/shard-cost/shard-cost.component';
 import { RegionSpreadComponent } from '../stats/region-spread/region-spread.component';
+import { CountsComponent } from '../stats/counts/counts.component';
 
 describe('DeckListComponent', () => {
   let component: DeckListComponent;
@@ -15,7 +16,7 @@ describe('DeckListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DeckListComponent, RarityCountsComponent, ShardCostComponent, RegionSpreadComponent ],
+      declarations: [ DeckListComponent, RarityCountsComponent, ShardCostComponent, RegionSpreadComponent, CountsComponent ],
       imports: [ HttpClientTestingModule, SharedModule ],
       providers: [ DataDragonService, DeckService ]
     })

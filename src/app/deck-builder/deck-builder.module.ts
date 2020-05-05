@@ -11,11 +11,12 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import { ShardCostComponent } from './stats/shard-cost/shard-cost.component';
 import { RarityCountsComponent } from './stats/rarity-counts/rarity-counts.component';
 import { RegionSpreadComponent } from './stats/region-spread/region-spread.component';
+import { CountsComponent } from './stats/counts/counts.component';
 
 
 
 @NgModule({
-  declarations: [CardListComponent, CardListFilterComponent, DeckListComponent, DeckBuilderComponent, ShardCostComponent, RarityCountsComponent, RegionSpreadComponent],
+  declarations: [CardListComponent, CardListFilterComponent, DeckListComponent, DeckBuilderComponent, ShardCostComponent, RarityCountsComponent, RegionSpreadComponent, CountsComponent],
   imports: [
     CommonModule,
     DeckBuilderRoutingModule,
