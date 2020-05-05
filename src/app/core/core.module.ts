@@ -1,4 +1,4 @@
-import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { NgModule, Optional, SkipSelf, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataDragonService } from './services/data-dragon.service';
 import { throwIfAlreadyLoaded } from './module-import.guard';
@@ -18,10 +18,10 @@ export class CoreModule {
     throwIfAlreadyLoaded(parentModule, 'CoreModule');
   }
 
-  static forRoot() {
+  static forRoot(): ModuleWithProviders<CoreModule> {
     return {
-      ngModule: CoreModule,
-      providers: [DataDragonService, DeckService]
-    }
-  }
+        ngModule: CoreModule,
+        providers: [DataDragonService, DeckService]
+    };
+}
 }
