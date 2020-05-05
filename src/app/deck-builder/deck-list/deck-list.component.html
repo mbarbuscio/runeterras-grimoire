@@ -1,6 +1,10 @@
 
 <div class="header">
-    
+    <div class="header-inner">
+        <rgm-region-spread [regionSpread]="stats.regionSpread"></rgm-region-spread>
+        <rgm-shard-cost [cost]="stats.shardCost"></rgm-shard-cost>
+        <rgm-rarity-counts [counts]="stats.rarityCount"></rgm-rarity-counts>
+    </div>
 </div>
 <div class="card-list">
     <rgm-preview-card *ngFor="let deckCard of cardsList | async" [card]="deckCard.card" [count]="deckCard.count" (click)="removeCard(deckCard.card)" ></rgm-preview-card>

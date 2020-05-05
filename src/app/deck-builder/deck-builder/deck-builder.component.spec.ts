@@ -9,6 +9,9 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { DeckListComponent } from '../deck-list/deck-list.component';
 import { DeckService } from 'src/app/core/services/deck.service';
+import { RarityCountsComponent } from '../stats/rarity-counts/rarity-counts.component';
+import { ShardCostComponent } from '../stats/shard-cost/shard-cost.component';
+import { RegionSpreadComponent } from '../stats/region-spread/region-spread.component';
 
 describe('DeckBuilderComponent', () => {
   let component: DeckBuilderComponent;
@@ -16,7 +19,14 @@ describe('DeckBuilderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DeckBuilderComponent, CardListComponent, CardListFilterComponent, DeckListComponent ],
+      declarations: [ DeckBuilderComponent,
+        CardListComponent,
+        CardListFilterComponent,
+        DeckListComponent,
+        RegionSpreadComponent,
+        RarityCountsComponent,
+        ShardCostComponent
+      ],
       providers: [ DataDragonService, DeckService ],
       imports: [ SharedModule, ScrollingModule, HttpClientTestingModule ]
     })

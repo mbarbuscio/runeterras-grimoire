@@ -34,4 +34,29 @@ body { margin: 0; font-family: 'Jost', sans-serif; }
             background-position: 60px 59px; /* X and Y */
         }
     }
+    &.region{
+        background-size: cover;
+        background-position: center center;
+        &.bilgewater{
+            background-image: url('./assets/icon-bilgewater.png');
+        }
+        &.demacia{
+            background-image: url('./assets/icon-demacia.png');
+        }
+        &.freljord{
+            background-image: url('./assets/icon-freljord.png');
+        }
+        &.ionia{
+            background-image: url('./assets/icon-ionia.png');
+        }
+        &.noxus{
+            background-image: url('./assets/icon-noxus.png');
+        }
+        &.piltoverzaun{
+            background-image: url('./assets/icon-piltoverzaun.png');
+        }
+        &.shadowisles{
+            background-image: url('./assets/icon-shadowisles.png');
+        }
+    }
 }

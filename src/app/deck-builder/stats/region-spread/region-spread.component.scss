@@ -1,0 +1,127 @@
+:host{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    &>*{
+        flex: 0 0 auto;
+    }
+    &>.count{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        &>i{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 30px;
+            width: 30px;
+            opacity: 0.5;
+        }
+        &>span{
+            color: #ffffff;
+            font-weight: 700;
+            z-index: 1;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+    }
+    &>.spread{
+       width: 200px;
+       height: 40px;
+       border-radius: 4px;
+       overflow: hidden;
+       position: relative;
+
+       @for $_ from 1 through 10 {
+            &.bilgewater-1-#{$_*10} {
+                &::before{
+                    background: linear-gradient(to right, rgb(180,86,58) 0%, rgb(180,86,58) $_*10%*(1-1/$_), rgba(180,86,58,0) 100%-(100%-$_*10%)/4);
+                }
+            }
+            &.bilgewater-2-#{$_*10} {
+                &::after{
+                    background: linear-gradient(to left, rgb(180,86,58) 0%, rgb(180,86,58) $_*10%*(1-1/$_), rgba(180,86,58,0) 100%-(100%-$_*10%)/4);
+                }
+            }
+            &.demacia-1-#{$_*10} {
+                &::before{
+                    background: linear-gradient(to right, rgb(230,217,183) 0%, rgb(230,217,183) $_*10%*(1-1/$_), rgba(230,217,183,0) 100%-(100%-$_*10%)/4);
+                }
+            }
+            &.demacia-2-#{$_*10} {
+                &::after{
+                    background: linear-gradient(to left, rgb(230,217,183) 0%, rgb(230,217,183) $_*10%*(1-1/$_), rgba(230,217,183,0) 100%-(100%-$_*10%)/4);
+                }
+            }
+            &.freljord-1-#{$_*10} {
+                &::before{
+                    background: linear-gradient(to right, rgb(143,215,243) 0%, rgb(143,215,243) $_*10%*(1-1/$_), rgba(143,215,243, 0) 100%-(100%-$_*10%)/4);
+                }
+            }
+            &.freljord-2-#{$_*10} {
+                &::after{
+                    background: linear-gradient(to left, rgb(143,215,243) 0%, rgb(143,215,243) $_*10%*(1-1/$_), rgba(143,215,243,0) 100%-(100%-$_*10%)/4);
+                }
+            }
+            &.ionia-1-#{$_*10} {
+                &::before{
+                    background: linear-gradient(to right, rgb(207,130,155) 0%, rgb(207,130,155) $_*10%*(1-1/$_), rgba(207,130,155, 0) 100%-(100%-$_*10%)/4);
+                }
+            }
+            &.ionia-2-#{$_*10} {
+                &::after{
+                    background: linear-gradient(to left, rgb(207,130,155) 0%, rgb(207,130,155) $_*10%*(1-1/$_), rgba(207,130,155,0) 100%-(100%-$_*10%)/4);
+                }
+            }
+            &.noxus-1-#{$_*10} {
+                &::before{
+                    background: linear-gradient(to right, rgb(160,82,79) 0%, rgb(160,82,79) $_*10%*(1-1/$_), rgba(160,82,79, 0) 100%-(100%-$_*10%)/4);
+                }
+            }
+            &.noxus-2-#{$_*10} {
+                &::after{
+                    background: linear-gradient(to left, rgb(160,82,79) 0%, rgb(160,82,79) $_*10%*(1-1/$_), rgba(160,82,79,0) 100%-(100%-$_*10%)/4);
+                }
+            }
+            &.piltoverzaun-1-#{$_*10} {
+                &::before{
+                    background: linear-gradient(to right, rgb(226,159,118) 0%, rgb(226,159,118) $_*10%*(1-1/$_), rgba(226,159,118, 0) 100%-(100%-$_*10%)/4);
+                }
+            }
+            &.piltoverzaun-2-#{$_*10} {
+                &::after{
+                    background: linear-gradient(to left, rgb(226,159,118) 0%, rgb(226,159,118) $_*10%*(1-1/$_), rgba(226,159,118,0) 100%-(100%-$_*10%)/4);
+                }
+            }
+            &.shadowisles-1-#{$_*10} {
+                &::before{
+                    background: linear-gradient(to right, rgb(59,125,111) 0%, rgb(59,125,111) $_*10%*(1-1/$_), rgba(59,125,111, 0) 100%-(100%-$_*10%)/4);
+                }
+            }
+            &.shadowisles-2-#{$_*10} {
+                &::after{
+                    background: linear-gradient(to left, rgb(59,125,111) 0%, rgb(59,125,111) $_*10%*(1-1/$_), rgba(59,125,111,0) 100%-(100%-$_*10%)/4);
+                }
+            }
+        }
+       &::before{
+           content: '';
+           position: absolute;
+           left: 0;
+           right: 0;
+           top: 0;
+           bottom: 0;
+       }
+       &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+    }
+}

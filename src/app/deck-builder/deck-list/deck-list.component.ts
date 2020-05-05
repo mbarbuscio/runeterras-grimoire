@@ -14,6 +14,10 @@ export class DeckListComponent implements OnInit {
     return this.deck.activeDeck;
   }
 
+  get stats() {
+    return this.deck.deckStats;
+  }
+
   constructor(private deck: DeckService) { }
 
   ngOnInit() {
