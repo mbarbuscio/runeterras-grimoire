@@ -27,7 +27,7 @@
         border-bottom: solid 1px #D5934A;
         &>.header-inner{
             height: 235px;
-            width: 100%;
+            width: calc(100% - 5px);
             margin-bottom: -5px;
             position: relative;
             border-bottom: solid 1px rgb(153, 102, 77);
@@ -35,7 +35,23 @@
             align-items: flex-end;
             flex-flow: row wrap;
             justify-content: space-between;
-            padding: 6px 12px;
+            padding: 6px 12px 6px 12px;
+            margin-right: 5px;
+            &>button{
+                border: solid 1px #D5934A;
+                background-color: #111111;
+                color: #D5934A;
+                border-radius: 4px;
+                height: 40px;
+                width: 100%;
+                font-size: 18px;
+                font-weight: 600;
+                &:hover{
+                    cursor: pointer;
+                    background-color: #D5934A;
+                    color: #111111;
+                }
+            }
             &::after{
                 // content: '';
                 background-color: #111111;

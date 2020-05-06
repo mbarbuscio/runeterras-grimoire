@@ -30,4 +30,7 @@ export class DeckListComponent implements OnInit {
     this.deck.removeCard(card);
   }
 
+  exportDeck() {
+    this.deck.exportDeck();
+  }
 }

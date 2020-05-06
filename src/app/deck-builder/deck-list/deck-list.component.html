@@ -1,6 +1,7 @@
 
 <div class="header">
     <div class="header-inner">
+        <button (click)="exportDeck()">EXPORT DECK</button>
         <rgm-counts [counts]="stats.cardCount"></rgm-counts>
         <rgm-region-spread [regionSpread]="stats.regionSpread"></rgm-region-spread>
         <rgm-shard-cost [cost]="stats.shardCost"></rgm-shard-cost>

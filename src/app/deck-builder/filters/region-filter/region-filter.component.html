@@ -1,0 +1,24 @@
+<div [class.active]="values.length == 0" (click)="clear()">
+    <i class="rgm-icon region all"></i>
+</div>
+<div (click)="!disabled('bilgewater') && toggle('bilgewater')" [class.disabled]="disabled('bilgewater')" [class.active]="isSelected('bilgewater')">
+    <i class="rgm-icon region bilgewater"></i>
+</div>
+<div (click)="!disabled('demacia') && toggle('demacia')" [class.disabled]="disabled('demacia')" [class.active]="isSelected('demacia')">
+    <i class="rgm-icon region demacia"></i>
+</div>
+<div (click)="!disabled('freljord') && toggle('freljord')" [class.disabled]="disabled('freljord')" [class.active]="isSelected('freljord')">
+    <i class="rgm-icon region freljord"></i>
+</div>
+<div (click)="!disabled('ionia') && toggle('ionia')" [class.disabled]="disabled('ionia')" [class.active]="isSelected('ionia')">
+    <i class="rgm-icon region ionia"></i>
+</div>
+<div (click)="!disabled('noxus') && toggle('noxus')" [class.disabled]="disabled('noxus')" [class.active]="isSelected('noxus')">
+    <i class="rgm-icon region noxus"></i>
+</div>
+<div (click)="!disabled('piltoverzaun') && toggle('piltoverzaun')" [class.disabled]="disabled('piltoverzaun')" [class.active]="isSelected('piltoverzaun')">
+    <i class="rgm-icon region piltoverzaun"></i>
+</div>
+<div (click)="!disabled('shadowisles') && toggle('shadowisles')" [class.disabled]="disabled('shadowisles')" [class.active]="isSelected('shadowisles')">
+    <i class="rgm-icon region shadowisles"></i>
+</div>

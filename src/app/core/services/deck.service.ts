@@ -3,13 +3,14 @@ import { Card } from 'src/app/models/card.model';
 import { BehaviorSubject, Observable, empty } from 'rxjs';
 import { DeckCard } from '@models';
 import { encode } from 'lor-deckcode';
+import { Clipboard } from '@angular/cdk/clipboard';
 
 @Injectable()
 export class DeckService {
 
   private cardList$: BehaviorSubject<Array<DeckCard>>;
 
-  constructor() {
+  constructor(private clipboard: Clipboard) {
     this.cardList$ = new BehaviorSubject([]);
   }
 
@@ -138,7 +139,7 @@ export class DeckService {
 
   canAddCard(card: Card) {
     const findCard = this.cardList$.value.find(deckCard => deckCard.card.cardCode === card.cardCode);
-    return findCard ? findCard.count < 3 : true;
+    return this.validateRegion(card) && (findCard ? findCard.count < 3 : true);
   }
 
   canAddChampion() {
@@ -149,13 +150,14 @@ export class DeckService {
   }
 
   isFullDeck() {
-    return this.cardList$.value.length === 40;
+    return this.cardList$.value
+      .map(deckCard => deckCard.count)
+      .reduce((left, right) => left + right, 0) === 40;
   }
 
   addCard(card: Card) {
     // tslint:disable-next-line: no-unused-expression
     !this.isFullDeck()
-      && this.validateRegion(card)
       && this.canAddCard(card)
       && (card.rarity !== 'Champion' || this.canAddChampion())
       && this.pushCard(card);
@@ -189,6 +191,6 @@ export class DeckService {
 
   exportDeck() {
     const decodedDeck = this.cardList$.value.map(deckCard => ({ code: deckCard.card.cardCode, count: deckCard.count }));
-    
+    this.clipboard.copy(encode(decodedDeck));
   }
 }

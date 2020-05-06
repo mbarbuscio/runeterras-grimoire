@@ -12,16 +12,28 @@ import { ShardCostComponent } from './stats/shard-cost/shard-cost.component';
 import { RarityCountsComponent } from './stats/rarity-counts/rarity-counts.component';
 import { RegionSpreadComponent } from './stats/region-spread/region-spread.component';
 import { CountsComponent } from './stats/counts/counts.component';
-
-
+import {ClipboardModule} from '@angular/cdk/clipboard';
+import { RegionFilterComponent } from './filters/region-filter/region-filter.component';
+import { CardSearchComponent } from './filters/card-search/card-search.component';
 
 @NgModule({
-  declarations: [CardListComponent, CardListFilterComponent, DeckListComponent, DeckBuilderComponent, ShardCostComponent, RarityCountsComponent, RegionSpreadComponent, CountsComponent],
+  declarations: [CardListComponent,
+    CardListFilterComponent,
+    DeckListComponent,
+    DeckBuilderComponent,
+    ShardCostComponent,
+    RarityCountsComponent,
+    RegionSpreadComponent,
+    CountsComponent,
+    RegionFilterComponent,
+    CardSearchComponent
+  ],
   imports: [
     CommonModule,
     DeckBuilderRoutingModule,
     SharedModule,
-    ScrollingModule
+    ScrollingModule,
+    ClipboardModule
   ],
   exports: [CardListComponent, CardListFilterComponent, DeckListComponent, DeckBuilderComponent]
 })

@@ -13,6 +13,7 @@ import { RarityCountsComponent } from '../stats/rarity-counts/rarity-counts.comp
 import { ShardCostComponent } from '../stats/shard-cost/shard-cost.component';
 import { RegionSpreadComponent } from '../stats/region-spread/region-spread.component';
 import { CountsComponent } from '../stats/counts/counts.component';
+import { RegionFilterComponent } from '../filters/region-filter/region-filter.component';
 
 describe('DeckBuilderComponent', () => {
   let component: DeckBuilderComponent;
@@ -27,7 +28,8 @@ describe('DeckBuilderComponent', () => {
         RegionSpreadComponent,
         RarityCountsComponent,
         ShardCostComponent,
-        CountsComponent
+        CountsComponent,
+        RegionFilterComponent
       ],
       providers: [ DataDragonService, DeckService ],
       imports: [ SharedModule, ScrollingModule, HttpClientTestingModule ]

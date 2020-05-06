@@ -1,4 +1,4 @@
-<h2>Filters</h2>
+<h4>Filters</h4>
 
 <div class="rarity-filter">
     <div (click)="filterRarity('champion');" [class.active]="activeFilters['rarity']?.value === 'champion'">
@@ -14,3 +14,7 @@
         <i class="rgm-icon rarity epic"></i>
     </div>
 </div>
+
+<rgm-region-filter></rgm-region-filter>
+
+<rgm-card-search></rgm-card-search>

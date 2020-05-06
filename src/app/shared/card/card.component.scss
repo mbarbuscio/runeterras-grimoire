@@ -1,5 +1,16 @@
 :host{
+    &:hover{
+        cursor: pointer;
+    }
     img{
         width: 180px;
+    }
+    &.disabled{
+        img{
+            filter: grayscale(100%);
+        }
+        &:hover{
+            cursor: not-allowed;
+        }
     }
 }

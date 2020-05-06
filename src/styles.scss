@@ -37,6 +37,9 @@ body { margin: 0; font-family: 'Jost', sans-serif; }
     &.region{
         background-size: cover;
         background-position: center center;
+        &.all{
+            background-image: url('./assets/icon-all.png');
+        }
         &.bilgewater{
             background-image: url('./assets/icon-bilgewater.png');
         }
