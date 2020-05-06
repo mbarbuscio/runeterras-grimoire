@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, filter, tap, take } from 'rxjs/operators';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, merge, forkJoin } from 'rxjs';
 import { Region, Globals, Keyword, SpellSpeed, Rarity } from '@models';
 import { Card } from 'src/app/models/card.model';
 import { FilterDefinition } from 'src/app/models/filter-definition.model';
@@ -54,7 +54,7 @@ export class DataDragonService {
     ).subscribe();
   }
 
-  public getRegions() : Observable<Region[]> {
+  public getRegions(): Observable<Region[]> {
     return this.getGlobals().pipe(
       map(response => {
         return response.regions;
@@ -62,7 +62,7 @@ export class DataDragonService {
     );
   }
 
-  public getKeywords() : Observable<Keyword[]> {
+  public getKeywords(): Observable<Keyword[]> {
     return this.getGlobals().pipe(
       map(response => {
         return response.keywords;
@@ -70,7 +70,7 @@ export class DataDragonService {
     );
   }
 
-  public getSpellSpeeds() : Observable<SpellSpeed[]> {
+  public getSpellSpeeds(): Observable<SpellSpeed[]> {
     return this.getGlobals().pipe(
       map(response => {
         return response.spellSpeeds;
@@ -78,7 +78,7 @@ export class DataDragonService {
     );
   }
 
-  public getRarities() : Observable<Rarity[]> {
+  public getRarities(): Observable<Rarity[]> {
     return this.getGlobals().pipe(
       map(response => {
         return response.rarities;
@@ -86,12 +86,12 @@ export class DataDragonService {
     );
   }
 
-  private getGlobals() : Observable<Globals> {
+  private getGlobals(): Observable<Globals> {
     return this.http.get('./assets/data/globals-en_us.json').pipe(
       map((res: any) => {
         return new Globals().deserialize(res);
       })
-    )
+    );
   }
 
   private getSetData(): Observable<Array<Card>> {
@@ -99,11 +99,22 @@ export class DataDragonService {
       map((res) => {
         return res.map(item => new Card().deserialize(item)).sort((left, right) =>  left.cost <= right.cost ? -1 : 1);
       })
-    )
+    );
+  }
+
+  private getAllSets(): Observable<Array<Card>> {
+    return forkJoin({ set1: this.http.get<Array<Card>>('./assets/data/set1-en_us.json'),
+      set2: this.http.get<Array<Card>>('./assets/data/set2-en_us.json')}).pipe(
+        map((fork) => [...fork.set1, ...fork.set2]),
+        map((res) => {
+          return res.map(item => new Card().deserialize(item)).sort((left, right) =>  left.cost <= right.cost ? -1 : 1);
+        }
+      )
+    );
   }
 
   public filteredSetData(filterPredicate): Observable<Array<Card>> {
-    return this.getSetData().pipe(
+    return this.getAllSets().pipe(
       map(setData => {
         return setData.filter(card => filterPredicate(card));
       })

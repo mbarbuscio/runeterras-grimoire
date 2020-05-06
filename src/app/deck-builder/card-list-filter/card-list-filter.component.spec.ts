@@ -4,6 +4,7 @@ import { CardListFilterComponent } from './card-list-filter.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { DataDragonService } from '@core';
 import { RegionFilterComponent } from '../filters/region-filter/region-filter.component';
+import { CardSearchComponent } from '../filters/card-search/card-search.component';
 
 describe('CardListFilterComponent', () => {
   let component: CardListFilterComponent;
@@ -11,7 +12,7 @@ describe('CardListFilterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CardListFilterComponent, RegionFilterComponent ],
+      declarations: [ CardListFilterComponent, RegionFilterComponent, CardSearchComponent ],
       imports: [ HttpClientTestingModule ],
       providers: [ DataDragonService ]
     })
